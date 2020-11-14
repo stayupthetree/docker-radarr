@@ -18,7 +18,7 @@ RUN \
 	jq && \
  echo "**** install radarr ****" && \
  if [ -z ${RADARR_RELEASE+x} ]; then \
-	RADARR_RELEASE=$(curl -sX GET "https://api.github.com/repos/stayupthetree/Radarr/releases/" \
+	RADARR_RELEASE=$(curl -sX GET "https://api.github.com/repos/stayupthetree/Radarr/releases" \
 	| jq -r '.[0] | .tag_name'); \
  fi && \
  radarr_url=$(curl -s https://api.github.com/repos/stayupthetree/Radarr/tags/"${RADARR_RELEASE}" \
