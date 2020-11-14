@@ -18,10 +18,10 @@ RUN \
 	jq && \
  echo "**** install radarr ****" && \
  if [ -z ${RADARR_RELEASE+x} ]; then \
-	RADARR_RELEASE=$(curl -sX GET "https://api.github.com/repos/Radarr/Radarr/releases" \
+	RADARR_RELEASE=$(curl -sX GET "https://api.github.com/repos/geogolem/releases/" \
 	| jq -r '.[0] | .tag_name'); \
  fi && \
- radarr_url=$(curl -s https://api.github.com/repos/Radarr/Radarr/releases/tags/"${RADARR_RELEASE}" \
+ radarr_url=$(curl -s https://api.github.com/repos/geogolem/Radarr/tags/"${RADARR_RELEASE}" \
 	|jq -r '.assets[].browser_download_url' |grep linux) && \
  mkdir -p \
 	/app/radarr/bin && \

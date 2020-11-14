@@ -2,7 +2,7 @@
 
 # project information
 project_name: radarr
-project_url: "https://github.com/Radarr/Radarr"
+project_url: "https://github.com/geogolem/Radarr/tree/JustWatchSupport"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/radarr.png"
 project_blurb: |
   [{{ project_name|capitalize }}]({{ project_url }}) - A fork of Sonarr to work with movies à la Couchpotato.
@@ -34,7 +34,7 @@ param_ports:
   - { external_port: "7878", internal_port: "7878", port_desc: "The port for the Radarr webinterface" }
 param_usage_include_env: true
 param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London, this is required for Radarr"}
+  - { env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG Europe/London, this is required for Radarr"}
 # optional env variables
 opt_param_usage_include_env: true
 opt_param_env_vars:
